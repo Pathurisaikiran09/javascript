@@ -64,8 +64,12 @@ console.log("Factorial: " + factorial)
 
 //Whether a Year is leap year or not
 let year=2020;
-if((year%4==0&&year%100! =0)||(year%400==0)){
+if((year%4==0&&year%100!=0)||(year%400==0)){
     console.log(year + "is leap year");
 } else{
     console.log(year+"is not leap year");
 }
+
+//Largest of Three Numbers
+let a=10,b=33,c=25;
+console.log(Math.max(a,b,c));
