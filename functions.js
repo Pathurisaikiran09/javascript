@@ -95,3 +95,9 @@ function sumArray(arr){
     return max;
 }
       console.log(largestNumber([22,8,6,19,4]));
+
+      function makeJuice(fruit){
+        console.log(fruit +  " " +"juice is ready");
+      }
+       makeJuice("orange");
+       makeJuice("Mango");
