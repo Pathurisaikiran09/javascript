@@ -39,10 +39,15 @@ function display(name) {
 }
 
 function processUser(callback) {
-    let username = "Sai";
-    callback(username);
+    let result = "Sai";
+    callback(result);
 }
-
 processUser(display);
 
+//Anonymous Function
+setTimeout(function () {
+    console.log("Executed after 3 seconds");
+}, 3000);
 
+const multiply1=a=>a*a;
+console.log(multiply1(8));
