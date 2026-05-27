@@ -101,3 +101,31 @@ function sumArray(arr){
       }
        makeJuice("orange");
        makeJuice("Mango");
+
+       //immediately invoked function
+      (function(){
+   console.log("Hello World");
+     })();
+
+     //Recursive Function
+     function countdown(n){
+        if(n<=0){
+            console.log("Finish");
+            return;
+        }
+        console.log(n);
+        countdown(n-1);
+        
+     }
+     countdown(9);
+
+     //Higher-Order Function
+     function calculate(operation,a,b){
+        return operation(a,b);
+     }
+     function add(x,y){
+        return x+y;
+     }
+     console.log(calculate(add,2,4));
+
+     
