@@ -94,7 +94,7 @@ var discounted =applyCalculation(500,applyDiscount)
     console.log("Price after discount: "+discounted);
 
     //Return a function from another function - Create multipliers.
-    function createMultiplier(multiplier){
+    function createMultiplier(multiplier){ 
         return function(amount){
             return amount*multiplier;
         }
@@ -114,7 +114,7 @@ var discounted =applyCalculation(500,applyDiscount)
       }
       registerUser("Sai_Kiran",showWelcomeMessage);
       
-      //callback function
+      
       function f2(){
         console.log("f2 fun");
         var add =(x,y,z)=>x+y+z;
