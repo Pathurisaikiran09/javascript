@@ -85,3 +85,186 @@ for(let i=0;i<cols;i++){
 }
 console.log("Transpose of a matrix:");
 console.log(transpose);
+
+//Print Diagonal Elements of a Matrix
+let Mat=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+];
+console.log(" PrimaryDiagonal  of a Matrix:");
+for(let i=0;i<Mat.length;i++){
+    console.log(Mat[i][i]);
+}
+console.log("Secondary Diagonal Elements of a Matrix:");
+for(let i=0;i<Mat.length;i++){
+    console.log(Mat[i][Mat.length-1-i]);
+}
+//Sum of Primary Diagonal Elements
+let sumPrimary=[
+    [9,3,9],
+    [2,9,0],
+    [7,3,9],
+]
+let sum=0;
+for(let i=0;i<sumPrimary.length;i++){
+    sum+=sumPrimary[i][i];
+}
+console.log("Sum of Primary Diagonal Elements:", sum);
+
+//Sum of Secondary Diagonal Elements
+let sumSecondary=[
+    [10,20,30],
+    [40,50,60],
+    [70,80,90],    
+];
+let sumD=0;
+let n=sumSecondary.length;
+for(let i=0;i<n;i++){
+    sumD+=sumSecondary[i][n-1-i];
+}
+console.log("Sum of Secondary Diagonal Elements:", sumD);
+
+//Sum of Diagonal Elements of a Square Matrix.
+let squareMatrix=[
+    [3,2,1],
+    [6,5,4],
+    [9,8,7],
+];
+let mainDiag=0;
+let secDiag=0;
+for(let i=0;i<3;i++){
+    mainDiag+=squareMatrix[i][i];
+    secDiag+=squareMatrix[i][2-i];
+}
+console.log("Sum of Main Diagonal Elements:", mainDiag);
+console.log("Sum of Secondary Diagonal Elements:", secDiag);
+
+//Matrix Multiplication
+let r=2;
+let c=2;
+let mA=[
+    [1,2],
+    [3,4],
+];
+let mB=[
+    [5,6],
+    [7,8],
+];
+let mC=[[],[]];
+for(let i=0;i<r;i++){
+    for(let j=0;j<c;j++){
+        mC[i][j]=0;
+        for(let k=0;k<c;k++){
+            mC[i][j]+=mA[i][k]*mB[k][j];
+        }
+    }
+}
+console.log("Matrix Multipliacation:");
+console.log(mC);
+
+//3x3 Matrix Multiplication
+let r1=3;
+let c1=3;
+const mD=[
+    [2,4,6],
+    [3,6,9],
+    [4,8,12],
+];
+const mE=[
+    [1,2,3],
+    [5,10,15],
+    [6,12,18],
+];
+let mF=[[],[],[]];
+for(let i=0;i<r1;i++){
+    for(let j=0;j<c1;j++){
+        mF[i][j]=0;
+        for(let k=0;k<c1;k++){
+            mF[i][j]=mD[i][k]*mE[k][j];
+        }
+    }
+}
+console.log("3x3 Matrix Multiplication:");
+console.log(mF);
+
+//Matrix Scalar multiplication
+const mS=[
+    [8,4,2],
+    [6,3,1],
+    [5,2,0],
+];
+let scalar=2;
+for(let i=0;i<mS.length;i++){
+    for(let j=0;j<mS[i].length;j++){
+        mS[i][j]=mS[i][j]*scalar;
+    }
+}
+console.log("Matrix Scalar Multiplication:");
+console.log(mS);
+
+//Identity Matrix
+let identity=[
+    [1,0,0],
+    [0,1,0],
+    [0,0,1],
+];
+let isIdentity=true;
+for(let i=0;i<3;i++){
+    for(let j=0;j<3;j++){
+        if((i===j && identity[i][j]!==1)||(i!==j && identity[i][j]!==0)){
+            isIdentity=false;
+        }
+    }
+}
+console.log("Is Identity Matrix:", isIdentity);
+
+//Print Matrix Elements in L Shape
+let LMatrix=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+];
+let m=LMatrix.length;
+console.log("Matrix Elements in L shape:");
+for(let i=0;i<n;i++){
+    console.log(LMatrix[i][0]);
+}
+for(let j=1;j<LMatrix.length;j++){
+    console.log(LMatrix[n-1][j]);
+}
+
+//Print Matrix Elements in Reverse L Shape
+console.log("Matrix Elements in Reverse L Shape:");
+for(let i=0;i<m;i++){
+    console.log(LMatrix[i][n-1]);
+}
+for(let j=0;j<n-1;j++){
+    console.log(LMatrix[n-1][j]);
+}
+//Print Top Row
+console.log("Top Row of the Matrix:")
+for(let i=0;i<LMatrix.length;i++){
+    console.log(LMatrix[0][i]);
+}
+//Print Bottom Row
+console.log("Bottom Row of the Matrix:");
+for(let i=0;i<LMatrix.length;i++){
+    console.log(LMatrix[2][i]);
+}
+//Print First  Column
+console.log("First Column of the Matrix:");
+for(let j=0;j<LMatrix.length;j++){
+    console.log(LMatrix[j][0]);
+}
+//Print Last Column
+console.log("Last column of the Matrix:");
+for(let j=0;j<LMatrix.length;j++){
+    console.log(LMatrix[j][n-1]);
+}
+//Print Corner Elements
+console.log("Corner Elements of the Matrix:");
+console.log(LMatrix[0][0]);
+console.log(LMatrix[0][n-1]);
+console.log(LMatrix[n-1][0]);
+console.log(LMatrix[n-1][n-1]);
