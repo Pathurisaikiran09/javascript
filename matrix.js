@@ -268,3 +268,63 @@ console.log(LMatrix[0][0]);
 console.log(LMatrix[0][n-1]);
 console.log(LMatrix[n-1][0]);
 console.log(LMatrix[n-1][n-1]);
+
+//Print Boundary Elements
+console.log("Print Boundary Elements:");
+for(let i=0;i<m;i++){
+    for(let j=0;j<m;j++){
+        if(i==0||i==n-1||j==0||j==n-1){
+            console.log(matrix[i][j]);
+        }
+    }
+}
+
+//Rotate Matrix 90° Clockwise
+let myMatrix=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+];
+const p=myMatrix.length;
+for(let i=0;i<p;i++){
+    for(let j=i+1;j<p;j++){
+     [myMatrix[i][j],myMatrix[j][i]]=[myMatrix[j][i],myMatrix[i][j]];
+    }
+}
+for(let i=0;i<p;i++){
+    myMatrix[i].reverse();
+}
+console.log(myMatrix);
+
+//count Even and Odd Numbers
+let Matrix1=[
+    [2,5,6],
+    [1,3,9],
+    [4,8,7]
+];
+let even=0;
+let odd=0;
+for(let i=0;i<Matrix1.length;i++){
+    for(let j=0;j<Matrix1[i].length;j++){
+        if(Matrix1[i][j]%2==0){
+            even++;
+        }else{
+                odd++;
+        }
+    }
+}
+    console.log(even,odd);
+
+    //Sum Of Each Row
+    let Matrix2=[
+        [9,5,0],
+        [2,9,8],
+        [8,6,7],
+    ];
+    for(let i=0;i<Matrix2.length;i++){
+        let sum=0;
+        for(let j=0;j<Matrix2[i].length;j++){
+            sum+=Matrix2[i][j];
+        }
+    }
+    console.log("Row:",sum);
