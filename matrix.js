@@ -321,10 +321,28 @@ for(let i=0;i<Matrix1.length;i++){
         [2,9,8],
         [8,6,7],
     ];
+    Matrix2[2][2]=10;
+    console.log(Matrix2);
     for(let i=0;i<Matrix2.length;i++){
         let sum=0;
         for(let j=0;j<Matrix2[i].length;j++){
             sum+=Matrix2[i][j];
         }
+    console.log("Row ${i+1}:",sum);
     }
-    console.log("Row:",sum);
+
+    //Searching an element
+    let marks=[
+        [80,93,67],
+        [76,56,82],
+        [40,68,92],
+    ]
+    let found=false;
+    for(let i=0;i<marks.length;i++){
+        for(let j=0;j<marks[i].length;j++){
+            if(marks[i][j]===20){
+                 found =true;
+            }
+        }
+    }
+    console.log(found);
