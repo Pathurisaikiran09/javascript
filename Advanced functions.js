@@ -122,4 +122,4 @@ var discounted =applyCalculation(500,applyDiscount)
       }
       var sum=f2()
       var r3=sum(1,2,3);
-      console.log(r3)
+      console.log(r3)  

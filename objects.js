@@ -13,7 +13,7 @@ console.log(person.name)
 
 //using bracket notation
 console.log(person["village"])
-
+ 
 //Adding new properties
 person.email="sai123@example.com";
 console.log(person)
@@ -53,5 +53,5 @@ const student={
         "Javascript",
     ]
 }
-console.log(student.address)
+console.log(student.address);
 console.log(student.skills[1])
